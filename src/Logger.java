@@ -6,7 +6,8 @@ public class Logger {
     private static Logger logger;
     private final DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy.MM.dd H:m:s ");
 
-    private Logger() {}
+    private Logger() {
+    }
 
     public static Logger getInstance() {
         if (logger == null) logger = new Logger();
@@ -14,6 +15,6 @@ public class Logger {
     }
 
     public void log(String msg) {
-        System.out.println("["+dateTimeFormatter.format(LocalDateTime.now())+""+ num++ + "] " + msg);
+        System.out.println("[" + dateTimeFormatter.format(LocalDateTime.now()) + "" + num++ + "] " + msg);
     }
 }

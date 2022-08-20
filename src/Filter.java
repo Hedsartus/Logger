@@ -15,18 +15,18 @@ public class Filter {
 
         logger.log("Запускаем фильтрацию");
 
-        for(int i = 0; i < source.size(); i++) {
+        for (int i = 0; i < source.size(); i++) {
             int element = source.get(i);
 
-            if(element > this.treshold) {
+            if (element > this.treshold) {
                 result.add(element);
-                logger.log("Элемент "+element+" проходит");
+                logger.log("Элемент " + element + " проходит");
             } else {
-                logger.log("Элемент "+element+" не проходит");
+                logger.log("Элемент " + element + " не проходит");
             }
         }
 
-        logger.log("Прошло фильтр "+result.size()+" элемента из "+source.size());
+        logger.log("Прошло фильтр " + result.size() + " элемента из " + source.size());
         Collections.sort(result);
         return result;
     }
